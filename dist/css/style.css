@@ -1,0 +1,1513 @@
+:root {
+  --w: 100px;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  margin: -200px 0 0 -200px;
+  border-radius: 2px;
+  color: #333;
+  box-shadow: 4px 8px 16px 0;
+  overflow: hidden;
+}
+.frame .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+.frame .space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  perspective-origin: 150% 150%;
+}
+.frame .square {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  animation: rotate 3s infinite;
+  animation-play-state: paused;
+}
+.frame .square:hover {
+  animation: rotate 3s infinite;
+}
+.frame .face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(163, 51, 163, 0.73);
+  border: 1px solid #d9d9d9;
+}
+.frame .face:nth-child(1) {
+  opacity: 0.4;
+  transform: translateZ(var(--w));
+}
+.frame .face:nth-child(2) {
+  opacity: 0.6;
+  transform: rotateY(270deg) translateZ(var(--w));
+}
+.frame .face:nth-child(3) {
+  opacity: 0.8;
+  transform: rotateY(90deg) translateZ(var(--w));
+}
+.frame .face:nth-child(4) {
+  opacity: 0.8;
+  transform: rotateY(180deg) translateZ(var(--w));
+}
+.frame .face:nth-child(5) {
+  opacity: 0.6;
+  transform: rotateY(90deg) translateZ(var(--w));
+}
+.frame .face:nth-child(6) {
+  opacity: 0.6;
+  transform: rotateY(-90deg) translateZ(var(--w));
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 51deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 141deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 231deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 321deg);
+  }
+  99% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 411deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate3d(1.2, 2.3, 0.5, 51deg);
+  }
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  margin: -200px 0 0 -200px;
+  border-radius: 2px;
+  color: #333;
+  box-shadow: 4px 8px 16px 0;
+  overflow: hidden;
+}
+.box .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.box .group {
+  color: lightcoral;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+.box .group .space:nth-child(0):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(20):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(40):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(60):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(80):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(100):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(120):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(140):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(160):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(180):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(200):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(220):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(240):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(260):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(280):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(300):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(320):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(340):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(360):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(380):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(400):hover ~ .plate {
+  transform: translate(calc(-50 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(1):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(21):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(41):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(61):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(81):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(101):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(121):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(141):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(161):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(181):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(201):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(221):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(241):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(261):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(281):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(301):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(321):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(341):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(361):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(381):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(401):hover ~ .plate {
+  transform: translate(calc(-45 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(2):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(22):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(42):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(62):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(82):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(102):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(122):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(142):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(162):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(182):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(202):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(222):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(242):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(262):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(282):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(302):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(322):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(342):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(362):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(382):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(402):hover ~ .plate {
+  transform: translate(calc(-40 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(3):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(23):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(43):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(63):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(83):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(103):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(123):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(143):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(163):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(183):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(203):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(223):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(243):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(263):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(283):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(303):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(323):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(343):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(363):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(383):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(403):hover ~ .plate {
+  transform: translate(calc(-35 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(4):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(24):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(44):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(64):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(84):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(104):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(124):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(144):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(164):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(184):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(204):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(224):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(244):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(264):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(284):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(304):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(324):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(344):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(364):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(384):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(404):hover ~ .plate {
+  transform: translate(calc(-30 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(5):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(25):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(45):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(65):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(85):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(105):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(125):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(145):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(165):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(185):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(205):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(225):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(245):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(265):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(285):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(305):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(325):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(345):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(365):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(385):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(405):hover ~ .plate {
+  transform: translate(calc(-25 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(6):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(26):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(46):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(66):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(86):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(106):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(126):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(146):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(166):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(186):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(206):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(226):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(246):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(266):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(286):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(306):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(326):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(346):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(366):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(386):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(406):hover ~ .plate {
+  transform: translate(calc(-20 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(7):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(27):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(47):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(67):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(87):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(107):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(127):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(147):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(167):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(187):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(207):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(227):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(247):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(267):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(287):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(307):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(327):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(347):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(367):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(387):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(407):hover ~ .plate {
+  transform: translate(calc(-15 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(8):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(28):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(48):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(68):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(88):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(108):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(128):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(148):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(168):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(188):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(208):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(228):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(248):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(268):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(288):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(308):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(328):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(348):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(368):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(388):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(408):hover ~ .plate {
+  transform: translate(calc(-10 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(9):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(29):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(49):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(69):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(89):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(109):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(129):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(149):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(169):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(189):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(209):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(229):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(249):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(269):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(289):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(309):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(329):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(349):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(369):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(389):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(409):hover ~ .plate {
+  transform: translate(calc(-5 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(10):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(30):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(50):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(70):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(90):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(110):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(130):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(150):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(170):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(190):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(210):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(230):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(250):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(270):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(290):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(310):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(330):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(350):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(370):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(390):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(410):hover ~ .plate {
+  transform: translate(calc(0 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(11):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(31):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(51):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(71):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(91):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(111):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(131):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(151):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(171):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(191):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(211):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(231):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(251):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(271):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(291):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(311):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(331):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(351):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(371):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(391):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(411):hover ~ .plate {
+  transform: translate(calc(5 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(12):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(32):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(52):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(72):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(92):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(112):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(132):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(152):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(172):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(192):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(212):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(232):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(252):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(272):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(292):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(312):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(332):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(352):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(372):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(392):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(412):hover ~ .plate {
+  transform: translate(calc(10 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(13):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(33):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(53):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(73):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(93):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(113):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(133):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(153):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(173):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(193):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(213):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(233):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(253):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(273):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(293):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(313):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(333):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(353):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(373):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(393):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(413):hover ~ .plate {
+  transform: translate(calc(15 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(14):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(34):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(54):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(74):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(94):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(114):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(134):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(154):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(174):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(194):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(214):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(234):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(254):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(274):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(294):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(314):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(334):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(354):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(374):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(394):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(414):hover ~ .plate {
+  transform: translate(calc(20 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(15):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(35):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(55):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(75):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(95):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(115):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(135):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(155):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(175):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(195):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(215):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(235):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(255):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(275):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(295):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(315):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(335):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(355):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(375):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(395):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(415):hover ~ .plate {
+  transform: translate(calc(25 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(16):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(36):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(56):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(76):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(96):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(116):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(136):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(156):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(176):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(196):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(216):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(236):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(256):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(276):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(296):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(316):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(336):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(356):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(376):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(396):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(416):hover ~ .plate {
+  transform: translate(calc(30 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(17):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(37):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(57):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(77):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(97):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(117):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(137):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(157):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(177):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(197):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(217):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(237):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(257):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(277):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(297):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(317):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(337):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(357):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(377):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(397):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(417):hover ~ .plate {
+  transform: translate(calc(35 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(18):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(38):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(58):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(78):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(98):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(118):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(138):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(158):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(178):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(198):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(218):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(238):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(258):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(278):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(298):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(318):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(338):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(358):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(378):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(398):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(418):hover ~ .plate {
+  transform: translate(calc(40 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(19):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(39):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(59):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(79):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(99):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(119):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(139):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(159):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(179):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(199):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(219):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(239):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(259):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(279):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(299):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(319):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(339):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(359):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(379):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(399):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(419):hover ~ .plate {
+  transform: translate(calc(45 * 1%), calc(50 * 1%));
+}
+.box .group .space:nth-child(20):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-50 * 1%));
+}
+.box .group .space:nth-child(40):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-45 * 1%));
+}
+.box .group .space:nth-child(60):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-40 * 1%));
+}
+.box .group .space:nth-child(80):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-35 * 1%));
+}
+.box .group .space:nth-child(100):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-30 * 1%));
+}
+.box .group .space:nth-child(120):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-25 * 1%));
+}
+.box .group .space:nth-child(140):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-20 * 1%));
+}
+.box .group .space:nth-child(160):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-15 * 1%));
+}
+.box .group .space:nth-child(180):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-10 * 1%));
+}
+.box .group .space:nth-child(200):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(-5 * 1%));
+}
+.box .group .space:nth-child(220):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(0 * 1%));
+}
+.box .group .space:nth-child(240):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(5 * 1%));
+}
+.box .group .space:nth-child(260):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(10 * 1%));
+}
+.box .group .space:nth-child(280):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(15 * 1%));
+}
+.box .group .space:nth-child(300):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(20 * 1%));
+}
+.box .group .space:nth-child(320):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(25 * 1%));
+}
+.box .group .space:nth-child(340):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(30 * 1%));
+}
+.box .group .space:nth-child(360):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(35 * 1%));
+}
+.box .group .space:nth-child(380):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(40 * 1%));
+}
+.box .group .space:nth-child(400):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(45 * 1%));
+}
+.box .group .space:nth-child(420):hover ~ .plate {
+  transform: translate(calc(50 * 1%), calc(50 * 1%));
+}
+.box .group .plate {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+.box .group .plate .pointer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: lightcoral;
+  border-radius: 50%;
+}
+.box .group .plate .pointer:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  border: 2px solid lightcoral;
+  animation: breath 1.5s linear infinite;
+}
+
+@keyframes breath {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
