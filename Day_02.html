@@ -23,15 +23,15 @@
             </div>
         </div>
     </div>
+    <script>
+        const group = document.querySelector('.group');
+        const plate = document.querySelector('.plate');
+        for (let i = 0; i < 400; i++) {
+            const space = document.createElement('div');
+            space.classList.add('space');
+            group.insertBefore(space, plate);
+        }
+    </script>
 </body>
-<script>
-    const group = document.querySelector('.group');
-    const plate = group.querySelector('.plate');
-    for (let i = 0; i < 400; i++) {
-        const space = document.createElement('div');
-        space.classList.add('space');
-        group.insertBefore(space, plate);
-    }
-</script>
 
 </html>
