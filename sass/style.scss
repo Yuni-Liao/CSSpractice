@@ -211,3 +211,112 @@
         transform: translate(-50%, -50%) scale(1);
     }
 }
+
+//////////////////////////
+// Day_03
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: lightblue;
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .egg {
+        background-color: bisque;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        animation: egg 2s ease-in-out .4s infinite normal both;
+
+        span {
+            position: absolute;
+            top: -25%;
+            left: -40%;
+        }
+
+        .core {
+            background-color: burlywood;
+            width: 100px;
+            height: 130px;
+            transform-origin: 50% 100%;
+            border-radius: 50%;
+            animation: egg-top 2s linear 0s infinite normal both;
+        }
+    }
+}
+
+@keyframes egg {
+    0% {
+        transform: translate(-50%, -300%) scaleY(1.5);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+
+    35% {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+
+    40% {
+        transform: translate(-50%, -75%) scaleY(1.025);
+    }
+
+    45% {
+        transform: translate(-50%, -65%) scaleY(1.05);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scaleY(1.025);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+
+    99.9% {
+        transform: translate(-50%, 180%) scaleY(1.5);
+    }
+
+    100% {
+        transform: translate(-50%, -300%) scaleY(1.5);
+    }
+}
+
+@keyframes egg-top {
+    0% {
+        transform: rotatez(0deg);
+    }
+
+    45% {
+        transform: rotatez(-5deg);
+    }
+
+    50% {
+        transform: rotatez(5deg);
+    }
+
+    55% {
+        transform: rotatez(-10deg);
+    }
+
+    60% {
+        transform: rotatez(-40deg);
+    }
+
+    100% {
+        transform: rotatez(0deg);
+    }
+}
